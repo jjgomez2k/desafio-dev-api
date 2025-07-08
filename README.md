@@ -90,8 +90,8 @@ Siga os passos abaixo para configurar e executar o projeto.
 
 ```
 
-git clone \<URL\_DO\_SEU\_REPOSITORIO\>
-cd wallet\_api\_challenge
+git clone https://github.com/jjgomez2k/desafio-dev-api
+cd wallet_api_challenge
 
 ````
 
@@ -120,8 +120,6 @@ DATABASES = {
 **Observação:** Se você não for usar Docker Compose e preferir uma instalação local do PostgreSQL, siga as instruções da seção anterior "Configurar o Banco de Dados PostgreSQL" para criar o usuário e o banco de dados manualmente.
 
 ### 3\. Aplicar Migrações do Banco de Dados
-
-**Importante:** Recentemente, o campo `timestamp` no modelo `Transaction` foi alterado para não ter mais `auto_now_add=True`. Isso significa que o `timestamp` deve ser fornecido explicitamente ao criar transações. Para que essa mudança seja refletida no seu banco de dados, você precisará criar e aplicar uma nova migração.
 
 Se estiver usando Docker Compose, as migrações serão aplicadas automaticamente quando você iniciar os serviços, conforme configurado no `command` do serviço `web` no `docker-compose.yml`.
 
