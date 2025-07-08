@@ -1,0 +1,30 @@
+version: '3.8'
+
+services:
+  db:
+    image: postgres:13-alpine
+    volumes:
+      - postgres_data:/var/lib/postgresql/data/
+    environment:
+      POSTGRES_DB: wallet_db
+      POSTGRES_USER: wallet_user
+      POSTGRES_PASSWORD: your_password # Substitua pela sua senha real
+    ports:
+      - "5432:5432" # Opcional: expõe a porta do PostgreSQL para acesso externo (ex: PgAdmin)
+
+  web:
+    build: .
+    command: sh -c "python manage.py makemigrations wallet_app && python manage.py migrate && python manage.py runserver 0.0.0.0:8000"
+    volumes:
+      - .:/app
+    ports:
+      - "8000:8000"
+    environment:
+      # Variáveis de ambiente para a aplicação Django
+      # Certifique-se de que estas correspondem às suas configurações em settings.py
+      DATABASE_URL: postgres://wallet_user:your_password@db:5432/wallet_db
+    depends_on:
+      - db
+
+volumes:
+  postgres_data:

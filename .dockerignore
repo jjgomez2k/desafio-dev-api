@@ -1,0 +1,31 @@
+# Ignora o ambiente virtual
+venv/
+.venv/
+
+# Ignora arquivos de cache Python
+__pycache__/
+*.pyc
+*.pyd
+*.pyo
+
+# Ignora arquivos de banco de dados SQLite (se estiver usando)
+*.sqlite3
+*.db
+
+# Ignora arquivos de IDEs
+.idea/
+.vscode/
+
+# Ignora arquivos de logs
+*.log
+
+# Ignora arquivos de configuração local (se existirem e não forem necessários no contêiner)
+.env
+.env.*
+config.ini
+
+# Ignora o diretório .git
+.git/
+
+# Ignora quaisquer outros arquivos gerados que não devem estar na imagem
+*.DS_Store
