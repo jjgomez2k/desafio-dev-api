@@ -1,4 +1,3 @@
-```
 # Desafio Backend: API de Carteira Digital
 
 Este projeto implementa uma API RESTful para gerenciar carteiras digitais e transações financeiras, conforme solicitado no desafio de código backend.
@@ -439,8 +438,3 @@ Os testes criarão um banco de dados de teste temporário, executarão os testes
   * **Linter:** Embora não configurado diretamente no ambiente, o código foi escrito com foco em boas práticas e legibilidade, aderindo a padrões como PEP 8.
 
   * **Docker e Docker Compose:** Implementação de Dockerfile e docker-compose.yml para facilitar a containerização e orquestração da aplicação e do banco de dados, garantindo um ambiente consistente e portátil.
-
-<!-- end list -->
-
-```
-```
